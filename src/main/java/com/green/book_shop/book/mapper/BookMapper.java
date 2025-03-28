@@ -2,6 +2,7 @@ package com.green.book_shop.book.mapper;
 
 import com.green.book_shop.book.dto.BookCategoryDTO;
 import com.green.book_shop.book.dto.BookDTO;
+import com.green.book_shop.book.dto.ImgDTO;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -21,4 +22,10 @@ public interface BookMapper {
   //카테고리 등록 쿼리
   public int insertCategory(String cateName);
 
+  //도서 이미지 등록
+//  public void insertImg(List<ImgDTO> imgList);
+  public void insertImg(BookDTO bookDTO);
+
+  //다음에 들어갈 BOOK_CODE 조회
+  public int getNextBookCode();
 }

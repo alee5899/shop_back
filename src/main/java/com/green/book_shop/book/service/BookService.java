@@ -15,4 +15,9 @@ public interface BookService {
   //카테고리 등록 기능
   public  int insertCategory(String cateName);
 
+  //도서 이미지 등록
+  public void insertImg(BookDTO bookDTO);
+
+  //다음에 들어갈 BOOK_CODE 조회
+  public int getNextBookCode();
 }
